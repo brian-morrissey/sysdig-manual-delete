@@ -20,10 +20,10 @@ for resource in $resources; do
   kind=$(echo "$resource" | cut -d'/' -f1)
   name=$(echo "$resource" | cut -d'/' -f2)
 
-  # Prompt the user to confirm if they want to echo the command
+  # Prompt the user to confirm if they want to delete the object
   read -p "Do you want to delete $kind/$name? (Y/N): " response
 
-  # If the user enters Y (yes), echo the kubectl delete command
+  # If the user enters Y (yes), kubectl delete command
   if [[ "$response" == "Y" || "$response" == "y" ]]; then
     kubectl delete $kind $name -n $namespace
     echo 
