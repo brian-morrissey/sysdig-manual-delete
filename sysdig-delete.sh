@@ -24,7 +24,7 @@ for resource in $resources; do
   echo "Resource: $kind/$name"
 
   # Prompt the user to confirm if they want to echo the command
-  read -p "Do you want to echo the delete command for $kind/$name? (Y/N): " response
+  read -p "Do you want to delete $kind/$name? (Y/N): " response
 
   # If the user enters Y (yes), echo the kubectl delete command
   if [[ "$response" == "Y" || "$response" == "y" ]]; then
