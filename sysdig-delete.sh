@@ -20,9 +20,6 @@ for resource in $resources; do
   kind=$(echo "$resource" | cut -d'/' -f1)
   name=$(echo "$resource" | cut -d'/' -f2)
 
-  # Debugging: Ensure we're getting the correct kind and name
-  echo "Resource: $kind/$name"
-
   # Prompt the user to confirm if they want to echo the command
   read -p "Do you want to delete $kind/$name? (Y/N): " response
 
